@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+        body {
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+           background-image: url(https://t3.ftcdn.net/jpg/02/18/09/60/360_F_218096081_j12gUY46AtIr8QOF9k7ruEUXbqTIrgCR.jpg); 
+          background-color: #000000;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ffffff;
+            background-attachment: fixed;
+        }
+        .nav-bar {
+            display: flex;
+            background-color:transparent;
+            overflow: hidden;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+           
+        }
+        .nav-bar a {
+            flex: 1;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            color: #ffffff;
+            white-space: nowrap;
+            font-weight: bold;
+            font-size: x-large;
+            transition: 1s;
+        }
+        .nav-bar a:hover {
+            background-color:transparent;
+            color: rgb(255, 0, 157);
+            filter: drop-shadow(0 0 19px rgb(255, 0, 157));
+            border-radius: 25%;
+            transform: scale(1.05);
+        }
+       
+        .container {
+            text-align: center;
+            padding: 150px 20px 100px; 
+        }
+        h2 {
+            font-size: 2px;
+            margin: 0;
+            color: rgb(255, 0, 157);
+            font-size: xx-large;
+            transition: 1s;
+        }
+        h2:hover{
+            transform: scale(0.9);
+            filter: drop-shadow(0 0 19px rgb(255, 0, 157));
+        }
+        .role {
+            font-size: 1.3;
+            margin: 10px 0;
+            color: #19ffff;
+            transition: 0.5s;
+        }
+        .role:hover{
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 19px rgb(0, 225, 255));
+        }
+
+        h3 {
+            font-size: 1.3;
+            margin: 10px 0;
+            color: #19ffff;
+        }
+        p {
+            max-width: 600px;
+            margin: 20px auto;
+            line-height: 1.6;
+            transition: 2s;
+           
+        }
+        p:hover{
+            filter: drop-shadow(0 0 19px white);
+            transform: scale(0.9);
+        }
+        
+        footer {
+            background:transparent;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }     
+        section {
+            padding: 20px;
+            margin: 20px;
+            margin-bottom: 50px;
+            background:transparent;
+            border-radius: 8px;
+            box-shadow: 0 0 20px   rgb(255, 255, 255);
+            transition: 0.5s;
+        } 
+        section:hover{
+            box-shadow: 0 0 20px   rgb(0, 217, 255);
+            transform: scale(0.9);
+
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: transparent;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 4px;
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #ffffff;  
+            transition: 0.5s;   
+
+        }  
+        ul li:hover{
+            filter: drop-shadow(0 0 19px white);
+            transform: scale(1.1);
+        }
+
+        .self{
+            color: #ffffff;
+            font-size: 1.1em;
+        }
+        .name{
+            color: rgb(255, 0, 157);
+            transition: 0.5s;
+        }
+        .name:hover{
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 19px rgb(255, 0, 157));
+        }
+        .section {
+    padding: 20px;
+    margin: 20px;
+    background:transparent;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+.course {
+    margin-bottom: 20px;
+}
+.course h3 {
+    margin: 0;
+    color: #ffffff;
+    transition: 0.5s;
+}
+.course h3:hover{
+ filter: drop-shadow(0 0 19px white);
+  transform: scale(0.9);
+   
+}
+.course p {
+    margin: 5px 0;
+    color: #00ffff;
+    transition: 0.5s;
+}
+.course p:hover {
+    filter: drop-shadow(0 0 19px white);
+    transform: scale(0.9);
+}
+
+
+
+.social-icons {
+    display: flex;
+    background-color: transparent;
+    overflow: hidden;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/*.social-icons a {
+    flex: 1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #00eeff;
+    white-space: nowrap;
+    font-weight: bolder;
+    font-size: 40px;
+    transition: 0.5s;
+}
+.social-icons a:hover {
+    background-color: transparent;
+    color: rgb(255, 7, 7);
+    transform: scale(1.3) translateY(-5px);
+    filter: drop-shadow(0 0 19px red);
+    
+}*/
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #03ffff;
+    font-size: 2rem;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #00f7ff;
+}
+
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #00eeff;
+    box-shadow: 0  0 40px #00c3ff;
+}
+
+@media screen and (max-width: 600px) {
+    .nav-bar {
+        justify-content: space-around;
+    }
+    .nav-bar a {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    .social-icons {
+        justify-content: space-around;
+    }
+    .social-icons a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        background-color: transparent;
+        border: 0.2rem solid #03ffff;
+        font-size: 1rem;
+        border-radius: 50%;
+       
+        transition: 0.3s ease;
+        color: #00f7ff;
+    }
+    
+}     
+    </style>
+</head>
+<body>
+   <div id="gg" class="nav">
+    <nav class="nav-bar">
+        <a  href="index.html">HOME</a>
+        <a href="#about-me">ABOUT_ME</a>
+        <a href="#education">EDUCATION</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+</div>
+    <div class="container">
+        <h2 class="name">Vasipalli Veneela</h2>
+        <h3 class="role">SOFTWARE DEVELOPER</h3>
+        <p>As a passionate and dedicated software developer, I specialize in creating efficient, scalable, and user-friendly software solutions. With a strong foundation in computer science and hands-on experience in various programming languages, I am committed to delivering high-quality code and innovative solutions</p>
+    </div>
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p class="self">Hello! I’m Vasipalli Veneela, a recent graduate in Computer Science and Engineering from JNTUK. With a strong foundation in programming languages such as Java, Python, and HTML/CSS, I am passionate about developing innovative software solutions. During my academic journey, I have worked on various projects, including [mention a notable project or two], which have honed my problem-solving and coding skills.
+
+            I am particularly interested in software development and have a keen interest in  web development, AI, machine learning. My goal is to leverage my technical expertise and creativity to contribute to impactful projects and collaborate with a dynamic team.
+            
+            In addition to my technical skills, I am a proactive learner and enjoy staying updated with the latest industry trends. </p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="section">
+        <div class="course">
+            <h3>Bachelor's of Technology in Computer Science</h3>
+            <p>Prakasam Engineering college, 2021 - 2025</p>
+            <p>GPA: 72%</p>
+        </div>
+        <div class="course">
+            <h3>Board of Intermidiate</h3>
+            <p>BR OXFORD, 2019 - 2021</p>
+            <p>GPA: 85%</p>
+        </div>
+    </div>
+    </section>
+
+    <section id="internship">
+        <h2>Internship's</h2>
+        <div class="section">
+        <div class="course">
+            <h3>WEB DEVELOPMENT</h3>
+            <p>During my web development internship at Brain O vision Private Limited, I was
+                actively involved in the design, development, and maintenance of web
+                applications.
+                </p>
+          
+        </div>
+        <div class="course">
+            <h3>Python full Stack</h3>
+            <p>During my intiemship intiemship at Excel-R Company, I worked closely with the
+                python team to support the development and deployment of python based solutions
+                </p>
+           
+        </div>
+    </div>
+    </section>
+
+    <section id="skills-interests">
+        <h2>Skill & Interest</h2>
+        <ul>
+            <li>Java </li>
+            <li>Html</li>
+            <li>Css</li>
+           
+        </ul>
+    </section>
+
+   
+  <center><h2>Contact Me</h2></center> 
+       <section id="contact">
+        <div class="social-icons">
+            <a href="https://github.com/veneelavasipalli" class="fa fa-github"></a>
+            <a href="mailto:veneelavasipalli@gmail.com" class="fa fa-envelope"></a>
+            <a href="https://www.instagram.com/vasipalli_veneela" class="fa fa-instagram"></a>
+            <!-- <a href="https://www.facebook.com/itsdeepakroi" class="fa fa-facebook"></a> -->
+
+        </div>
+    </section>
+   
+    <footer>
+        PORTFOLIO 2024 
+    </footer>
+</body>
+</html>
